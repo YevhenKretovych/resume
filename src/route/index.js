@@ -161,7 +161,7 @@ router.get('/education', function (req, res) {
     header,
 
     main: {
-      title: 'My education',
+      title: 'My educationss',
       educations: [
         {
           name: 'Machine building college of SUU',
