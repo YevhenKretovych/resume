@@ -1,0 +1,114 @@
+<div>
+    <main>
+        <section>
+            {{#with program}}
+            <div>
+                {{#with excursion}}
+                <div>
+                    <div>
+                        <h1>{{name}}</h1>
+                    </div>
+                    {{#with location}}
+                    <div>
+                        <address>Location: {{city}} {{country}}</address>
+                    </div>
+                    {{/with}}
+                    <div>{{date}}</div>
+                    <ul>
+                        {{#each program}}
+                        <li>
+                            <div>
+                                {{> title title=name big=true}}
+                            </div>
+                            <div>{{type}}</div>
+                            <div>Duration: {{duration}} hours</div>
+                            <br />
+                            <em>Details:</em>
+                            {{#with details}}
+                            <div>
+                                {{#with museum}}
+                                <div>
+                                    <div>
+                                        <cite>{{name}}</cite>
+                                    </div>
+                                    <br />
+                                    {{#with location}}
+                                    <div>
+                                        <em>Location:</em>
+                                        <address>
+                                            {{address}}
+                                            <br />
+                                            {{city}}
+                                            <br />
+                                            {{country}}
+                                        </address>
+                                    </div>
+                                    <br />
+                                    {{/with}}
+                                    <em>Exhibits:</em>
+                                    <ul>
+                                        {{#each exhibits}}
+                                        <li>
+                                            <cite>{{name}}</cite>
+                                            <div>{{artist}}</div>
+                                            <p>{{description}}</p>
+                                            {{#if audio_guide}}
+                                            Audio guide
+                                            {{/if}}
+                                        </li>
+                                        <br />
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                                {{/with}}
+                                {{#with venue}}
+                                <div>
+                                    <div>
+                                        <cite>{{name}}</cite>
+                                    </div>
+                                    <br />
+                                    {{#with location}}
+                                    <div>
+                                        <em>Location:</em>
+                                        <address>
+                                            {{address}}
+                                            <br />
+                                            {{city}}
+                                            <br />
+                                            {{country}}
+                                        </address>
+                                    </div>
+                                    {{/with}}
+                                </div>
+                                <br />
+                                {{/with}}
+                                <em>Performers:</em>
+                                <ul>
+                                    {{#each performers}}
+                                    <li>
+                                        <cite>{{name}}</cite>
+                                        <div>{{type}}</div>
+                                    </li>
+                                    <br />
+                                    {{/each}}
+                                </ul>
+                                <em>Guide:</em>
+                                {{#with guide}}
+                                <div>
+                                    <div>{{name}}</div>
+                                    <div>Language: {{language}}</div>
+                                    <div>Rating: {{rating}}</div>
+                                </div>
+                                {{/with}}
+                            </div>
+                            {{/with}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                {{/with}}
+            </div>
+            {{/with}}
+        </section>
+    </main>
+</div>
