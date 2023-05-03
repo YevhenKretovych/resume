@@ -1,0 +1,200 @@
+<div>
+    <main>
+        <section>
+            <div>
+                <div>
+                    <h1>{{make}} {{model}}</h1>
+                </div>
+                <div>Year : {{year}}</div>
+                <div>color: {{color}}</div>
+                <br />
+                <hr />
+                {{#with features}}
+                <div>
+                    {{> title title="Features" big=true}}
+                    <br />
+                    {{> title title="Interior" big=false}}
+                    {{#with interior}}
+                    <div>
+                        {{#with seats}}
+                        <div>
+                            <em>Seats:</em>
+                            <span class="badge text-bg-primary">Material: {{material}}</span>
+                            <span class="badge text-bg-secondary">Color: {{color}}</span>
+                            {{#if heated}}
+                            <span class="badge text-bg-success">Heated</span>
+                            {{/if}}
+                            {{#if ventilated}}
+                            <span class="badge text-bg-danger">Ventilated</span>
+                            {{/if}}
+                        </div>
+                        {{/with}}
+                        {{#with dashboard}}
+                        <div>
+                            <em>Dashboard:</em>
+                            <span class="badge text-bg-primary">Material: {{material}}</span>
+                            <span class="badge text-bg-secondary">Color: {{color}}</span>
+                            {{#with display}}
+                            <span class="badge text-bg-success">
+                                Display:
+                                {{type}},
+                                {{size}},
+                                {{resolution}},
+                                {{#if touchscreen}}
+                                touchscreen
+                                {{/if}}
+                            </span>
+                            {{/with}}
+                        </div>
+                        {{/with}}
+                        {{#with audio}}
+                        <div>
+                            <em>Audio:</em>
+                            <span class="badge text-bg-primary">System: {{system}}</span>
+                            <span class="badge text-bg-secondary">Speakers: {{speakers}}</span>
+                            {{#if subwoofer}}
+                            <span class="badge text-bg-success">subwoofer</span>
+                            {{/if}}
+                            {{#if bluetooth}}
+                            <span class="badge text-bg-danger">bluetooth</span>
+                            {{/if}}
+                            {{#if USB}}
+                            <span class="badge text-bg-warning">USB</span>
+                            {{/if}}
+                        </div>
+                        {{/with}}
+                    </div>
+                    <br />
+                    {{/with}}
+                    {{> title title="Exterior" big=false}}
+                    {{#with exterior}}
+                    <div>
+                        {{#with wheels}}
+                        <div>
+                            <em>Wheels:</em>
+                            <span class="badge text-bg-primary">Size: {{size}}</span>
+                            <span class="badge text-bg-secondary">Type: {{type}}</span>
+                            <span class="badge text-bg-success">Color: {{color}}</span>
+                        </div>
+                        {{/with}}
+                        {{#with headlights}}
+                        <div>
+                            <em>Headlights:</em>
+                            <span class="badge text-bg-primary">Type: {{type}}</span>
+                            <span class="badge text-bg-secondary">Brightness: {{brightness}}</span>
+                            {{#if automatic}}
+                            <span class="badge text-bg-success">automatic</span>
+                            {{/if}}
+                        </div>
+                        {{/with}}
+                        {{#with sunroof}}
+                        <div>
+                            <em>Sunroof:</em>
+                            <span class="badge text-bg-primary">Type: {{type}}</span>
+                            <span class="badge text-bg-secondary">Size: {{size}}</span>
+                            {{#if automatic}}
+                            <span class="badge text-bg-success">automatic</span>
+                            {{/if}}
+                        </div>
+                        {{/with}}
+                    </div>
+                    <br />
+                    {{/with}}
+                    {{> title title="Safety"}}
+                    {{#with safety}}
+                    <div>
+                        {{#with airbags}}
+                        <div>
+                            <em>Airbags:</em>
+                            <span class="badge text-bg-primary">Front: {{front}}</span>
+                            <span class="badge text-bg-secondary">Side: {{side}}</span>
+                            <span class="badge text-bg-success">Knee: {{knee}}</span>
+                            <span class="badge text-bg-danger">Rear: {{rear}}</span>
+                        </div>
+                        {{/with}}
+                        {{#with assistance}}
+                        <div>
+                            <em>Assistance:</em>
+                            {{#if blind_spot_monitoring}}
+                            <span class="badge text-bg-primary">Blind spot monitoring</span>
+                            {{/if}}
+                            {{#if rear_cross_traffic_alert}}
+                            <span class="badge text-bg-secondary">Rear cross traffic alert</span>
+                            {{/if}}
+                            {{#if lane_departure_warning}}
+                            <span class="badge text-bg-success">Lane departure warning</span>
+                            {{/if}}
+                            {{#if adaptive_cruise_control}}
+                            <span class="badge text-bg-danger">Adaptive cruise control</span>
+                            {{/if}}
+                            {{#if collision_warning}}
+                            <span class="badge text-bg-warning">Collision warning</span>
+                            {{/if}}
+                        </div>
+                        {{/with}}
+                    </div>
+                    {{/with}}
+                </div>
+                {{/with}}
+
+                <br />
+                <hr />
+                <br />
+
+                {{#with engine}}
+                <div>
+                    {{> title title="Engine" big=true}}
+                    <br />
+                    <span class="badge text-bg-primary">Type: {{type}}</span>
+                    <span class="badge text-bg-secondary">Displacement: {{displacement}}</span>
+                    <span class="badge text-bg-success">Horsepower: {{horsepower}}</span>
+                    <span class="badge text-bg-danger">Torque: {{torque}}</span>
+                    {{#with transmission}}
+                    <div>
+                        <em>Transmission:</em>
+                        <span class="badge text-bg-primary">Type: {{type}}</span>
+                        <span class="badge text-bg-secondary">Gears: {{gears}}</span>
+                    </div>
+                    {{/with}}
+                </div>
+                {{/with}}
+
+                <br />
+                <hr />
+                <br />
+
+                {{#with fuel_economy}}
+                <div>
+                    {{> title title="Fuel economy" big=true}}
+                    <br />
+                    <span class="badge text-bg-primary">City: {{city}}</span>
+                    <span class="badge text-bg-secondary">Highway: {{highway}}</span>
+                    <span class="badge text-bg-success">Combined: {{combined}}</span>
+                </div>
+                {{/with}}
+
+                <br />
+                <hr />
+                <br />
+
+                {{#with price}}
+                <div>
+                    {{> title title="Price" big=true}}
+                    <br />
+                    <span class="badge text-bg-primary">Base: {{base}}</span>
+                    <span class="badge text-bg-secondary">Destination: {{destination}}</span>
+                    {{#with options}}
+                    <div>
+                        <em>Options:</em>
+                        <span class="badge text-bg-primary">Navigation: {{navigation}}</span>
+                        <span class="badge text-bg-secondary">Moonroof: {{moonroof}}</span>
+                        <span class="badge text-bg-success">Premium paint: {{premium_paint}}</span>
+                    </div>
+                    {{/with}}
+                    <span class="badge text-bg-success">Total: {{total}}</span>
+                </div>
+                {{/with}}
+            </div>
+        </section>
+    </main>
+</div>
