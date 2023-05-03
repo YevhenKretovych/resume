@@ -1,0 +1,70 @@
+<div>
+    <main>
+        <section>
+            <div>
+                <div>
+                    <h1>{{name}}</h1>
+                </div>
+                <div>
+                    <p>{{description}}</p>
+                </div>
+                {{#with history}}
+                <div>
+                    <div>{{year}}</div>
+                    <div>{{founder}}</div>
+                    <br />
+                    <em>Types:</em>
+                </div>
+                {{/with}}
+                <ul>
+                    {{#each types}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+                <em>Syntax:</em>
+                {{#with syntax}}
+                <div>
+                    <span class="badge text-bg-primary">{{variables}}</span>
+                    <span class="badge text-bg-secondary">{{functions}}</span>
+                    <span class="badge text-bg-success">{{conditionals}}</span>
+                    <span class="badge text-bg-danger">{{loops}}</span>
+                    <span class="badge text-bg-warning">{{classes}}</span>
+                </div>
+                <br />
+                {{/with}}
+                <em>Features:</em>
+                <ul>
+                    {{#each features}}
+                    <li>
+                        <span class="badge text-bg-info">{{this}}</span>
+                    </li>
+                    {{/each}}
+                </ul>
+                <em>Libraries:</em>
+                <ul>
+                    {{#each libraries}}
+                    <li>
+                        <span class="badge text-bg-light">{{this}}</span>
+                    </li>
+                    {{/each}}
+                </ul>
+                <em>Tools:</em>
+                <ul>
+                    {{#each tools}}
+                    <li>
+                        <span class="badge text-bg-dark">{{this}}</span>
+                    </li>
+                    {{/each}}
+                </ul>
+                <em>Community:</em>
+                <ul>
+                    {{#each community}}
+                    <li>
+                        <button type="button" class="btn btn-link">{{name}} - {{type}}</button>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </section>
+    </main>
+</div>
