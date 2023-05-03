@@ -1,0 +1,123 @@
+<div>
+    <main>
+        <section>
+            <div>
+                <div>
+                    <h1>{{name}}</h1>
+                </div>
+                <div>
+                    <em>Users:</em>
+                    <ul>
+                        {{#each users}}
+                        <li>
+                            <span class="badge text-bg-primary">Id: {{id}}</span>
+                            <span class="badge text-bg-secondary">Name: {{name}}</span>
+                            <span class="badge text-bg-success">Gender: {{gender}}</span>
+                            <span class="badge text-bg-danger">Age: {{age}}</span>
+                            <div>
+                                <em>Friends:</em>
+                                <ul>
+                                    {{#each friends}}
+                                    <li>
+                                        <span class="badge text-bg-primary">Id: {{id}}</span>
+                                        <span class="badge text-bg-secondary">Name: {{name}}</span>
+                                        <span class="badge text-bg-success">Gender: {{gender}}</span>
+                                        <span class="badge text-bg-danger">Age: {{age}}</span>
+                                        <div>
+                                            <em>Mutual friends:</em>
+                                            <ul>
+                                                {{#each mutual_friends}}
+                                                <li>
+                                                    <span class="badge text-bg-primary">Id: {{id}}</span>
+                                                    <span class="badge text-bg-secondary">Name: {{name}}</span>
+                                                    <span class="badge text-bg-success">Gender: {{gender}}</span>
+                                                    <span class="badge text-bg-danger">Age: {{age}}</span>
+                                                    {{#if mutual_friends}}
+                                                    <div>
+                                                        <em>Mutual friends:</em>
+                                                        <ul>
+                                                            {{#each mutual_friends}}
+                                                            <li>
+                                                                <span class="badge text-bg-primary">Id: {{id}}</span>
+                                                                <span class="badge text-bg-secondary">Name:
+                                                                    {{name}}</span>
+                                                                <span class="badge text-bg-success">Gender:
+                                                                    {{gender}}</span>
+                                                                <span class="badge text-bg-danger">Age: {{age}}</span>
+                                                            </li>
+                                                            {{/each}}
+                                                        </ul>
+                                                    </div>
+                                                    {{/if}}
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                        </div>
+                                        {{#if groups}}
+                                        <div>
+                                            <em>Groups:</em>
+                                            <ul>
+                                                {{#each groups}}
+                                                <li>
+                                                    <span class="badge text-bg-primary">Id: {{id}}</span>
+                                                    <span class="badge text-bg-secondary">Name: {{name}}</span>
+                                                    <p>{{description}}</p>
+                                                    <div>
+                                                        <em>Members:</em>
+                                                        <ul>
+                                                            {{#each members}}
+                                                            <li>
+                                                                <span class="badge text-bg-primary">Id: {{id}}</span>
+                                                                <span class="badge text-bg-secondary">Name:
+                                                                    {{name}}</span>
+                                                                <span class="badge text-bg-success">Gender:
+                                                                    {{gender}}</span>
+                                                                <span class="badge text-bg-danger">Age: {{age}}</span>
+                                                            </li>
+                                                            {{/each}}
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                        </div>
+                                        {{/if}}
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                            {{#if groups}}
+                            <div>
+                                <em>Groups:</em>
+                                <ul>
+                                    {{#each groups}}
+                                    <li>
+                                        <span class="badge text-bg-primary">Id: {{id}}</span>
+                                        <span class="badge text-bg-secondary">Name: {{name}}</span>
+                                        <p>{{description}}</p>
+                                        <div>
+                                            <em>Members:</em>
+                                            <ul>
+                                                {{#each members}}
+                                                <li>
+                                                    <span class="badge text-bg-primary">Id: {{id}}</span>
+                                                    <span class="badge text-bg-secondary">Name: {{name}}</span>
+                                                    <span class="badge text-bg-success">Gender: {{gender}}</span>
+                                                    <span class="badge text-bg-danger">Age: {{age}}</span>
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                            {{/if}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
