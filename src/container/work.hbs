@@ -4,12 +4,10 @@
         <section>
             {{> title title="Work history" big=true}}
             <div>
-                <ul>
+                <ul class="ps-5">
                     {{#each works}}
                     <li>
                         <div>{{position}}</div>
-
-                        <br />
 
                         <div>
                             {{duration.from}} -
@@ -19,8 +17,6 @@
                             (зараз тут працюємо)
                             {{/if}}
                         </div>
-
-                        <br />
 
                         <div>
                             {{#with company}}
@@ -32,49 +28,33 @@
                             {{/with}}
                         </div>
 
-                        <br />
-                        <br />
-
-                        <div>
-                            <strong>Projects ({{projectAmount}})</strong>
+                        <div class="my-3">
+                            <strong>Projects ({{projectAmount}}):</strong>
                         </div>
 
-                        <br />
-
-                        <ul>
+                        <ul class="ps-5">
                             {{#each projects}}
                             <li>
                                 <div>{{> link href=url text=name blank=true noLine=true}}</div>
-
-                                <br />
-
                                 <div>
                                     <p>{{about}}</p>
                                 </div>
 
-                                <br />
-
-                                <div>
+                                <div class="my-2">
                                     <em>Project stacks ({{../stackAmount}})</em>
                                 </div>
 
-                                <br />
-
-                                <ul>
+                                <ul class="ps-5">
                                     {{#each stacks}}
                                     <li>{{name}}</li>
                                     {{/each}}
                                 </ul>
 
-                                <br />
-
-                                <div>
-                                    <em>Project awards</em>
+                                <div class="my-2">
+                                    <em>Project awards:</em>
                                 </div>
 
-                                <br />
-
-                                <ul>
+                                <ul class="ps-5">
                                     {{#each awards}}
                                     <li>{{name}}</li>
                                     {{/each}}
@@ -83,7 +63,6 @@
                             {{/each}}
                         </ul>
                     </li>
-                    <br />
                     {{/each}}
                 </ul>
             </div>
