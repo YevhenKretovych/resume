@@ -17,10 +17,13 @@
             {{/with}}
         </section>
 
-        <section class="col-12">
+        <div class="col-12">
             <h1 class="my-5">{{header}}</h1>
+        </div>
+
+        <section class="col-8">
             <div class="row g-2">
-                <div class="col-8">
+                <div class="col-12">
                     {{#with contacts_data}}
                     <div class="card">
                         <div class="card-body">
@@ -88,60 +91,9 @@
                     </div>
                     {{/with}}
                 </div>
-
-                <aside class="col-4">
-                    <div class="card mb-2">
-                        {{#each action_block}}
-                        <div class="m-2">
-                            <button
-                                class="btn {{#if isSuccess}}btn-success{{/if}} {{#if isDanger}}btn-danger{{/if}} {{#if isInfo}}btn-info{{/if}}">
-                                {{text}}
-                            </button>
-                        </div>
-                        {{/each}}
-                    </div>
-
-                    <div class="card">
-                        {{#with total}}
-                        <div class="card-body pb-1">
-                            <div class="card-title">
-                                <h2>{{title}}</h2>
-                            </div>
-                            {{#each item_list}}
-                            <div>{{name}}: {{price}}</div>
-                            {{/each}}
-
-                            <div>
-                                <hr />
-                            </div>
-
-                            {{#each additional_info}}
-                            <div>{{text}}: {{value}}</div>
-                            {{/each}}
-
-                            <div>
-                                <hr />
-                            </div>
-
-                            {{#each button}}
-                            <div class="mb-2">
-                                <button
-                                    class="btn {{#if isPrimary}}btn-primary{{/if}} {{#if isOutline}}btn-outline-primary{{/if}}">
-                                    {{text}}
-                                </button>
-                            </div>
-                            {{/each}}
-                        </div>
-                        {{/with}}
-                    </div>
-                </aside>
-
-
             </div>
-        </section>
 
-        <section class="col-12">
-            <div class="col-8">
+            <div class="col-12">
                 {{#with delivery}}
                 <div class="card">
                     <div class="my-2">
@@ -238,10 +190,8 @@
                 </div>
                 {{/with}}
             </div>
-        </section>
 
-        <section class="col-12">
-            <div class="col-8">
+            <div class="col-12">
                 {{#with coupon}}
                 <div class="card py-2">
                     <div class="my-2">
@@ -297,10 +247,8 @@
                 </div>
                 {{/with}}
             </div>
-        </section>
 
-        <section class="col-12">
-            <div class="col-8">
+            <div class="col-12">
                 {{#with quiz}}
                 <div class="card py-2">
                     <div class="my-2">
@@ -355,6 +303,55 @@
                     {{/with}}
                 </div>
                 {{/with}}
+        </section>
+
+        <section class="col-4">
+            <div class="col-12">
+                <div class="card mb-2">
+                    {{#each action_block}}
+                    <div class="m-2">
+                        <button
+                            class="btn {{#if isSuccess}}btn-success{{/if}} {{#if isDanger}}btn-danger{{/if}} {{#if isInfo}}btn-info{{/if}}">
+                            {{text}}
+                        </button>
+                    </div>
+                    {{/each}}
+                </div>
+
+                <div class="card">
+                    {{#with total}}
+                    <div class="card-body pb-1">
+                        <div class="card-title">
+                            <h2>{{title}}</h2>
+                        </div>
+                        {{#each item_list}}
+                        <div>{{name}}: {{price}}</div>
+                        {{/each}}
+
+                        <div>
+                            <hr />
+                        </div>
+
+                        {{#each additional_info}}
+                        <div>{{text}}: {{value}}</div>
+                        {{/each}}
+
+                        <div>
+                            <hr />
+                        </div>
+
+                        {{#each button}}
+                        <div class="mb-2">
+                            <button
+                                class="btn {{#if isPrimary}}btn-primary{{/if}} {{#if isOutline}}btn-outline-primary{{/if}}">
+                                {{text}}
+                            </button>
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{/with}}
+                </div>
+            </div>
         </section>
 
         <section class="col-12">
