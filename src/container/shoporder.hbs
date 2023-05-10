@@ -360,11 +360,21 @@
                     <div class="row">
                         {{#each footer}}
                         <div class="nav flex-colum col-2 me-1">
-                            {{#each this}}
                             <div class="nav-item">
-                                <a href={{link}} class="btn btn-link nav-link">{{text}}</a>
+                                <a href={{this.[0].link}} class="btn btn-link nav-link">{{this.[0].text}}</a>
                             </div>
-                            {{/each}}
+
+                            <div class="nav-item">
+                                <a href={{this.[1].link}} class="btn btn-link nav-link">{{this.[1].text}}</a>
+                            </div>
+
+                            <div class="nav-item">
+                                <a href={{this.[2].link}} class="btn btn-link nav-link">{{this.[2].text}}</a>
+                            </div>
+
+                            <div class="nav-item">
+                                <a href={{this.[3].link}} class="btn btn-link nav-link disabled">{{this.[3].text}}</a>
+                            </div>
                         </div>
                         {{/each}}
                     </div>
