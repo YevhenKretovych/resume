@@ -1,0 +1,385 @@
+<main class="p-5">
+    <div class="row">
+
+        <section class="col-12">
+            {{#with navigation}}
+            <div class="card">
+                <ul class="nav">
+                    {{#each links}}
+                    <li class="nav-item">
+                        <a {{#if href}}href={{href}} class="nav-link" {{else}}class="nav-link disabled" {{/if}}>
+                            {{text}}
+                        </a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{/with}}
+        </section>
+
+        <div class="col-12">
+            <h1 class="my-5">{{header}}</h1>
+        </div>
+
+        <section class="col-8">
+            <div class="row g-2">
+                <div class="col-12">
+                    {{#with contacts_data}}
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h2>{{title}}</h2>
+                            </div>
+                            {{#each buttons}}
+                            <button {{#if isPrimary}}class="btn btn-warning" {{/if}} {{#if
+                                isOutline}}class="btn btn-outline-warning" {{/if}}>
+                                {{text}}
+                            </button>
+                            {{/each}}
+
+                            {{#with form}}
+                            <div class="row my-4">
+                                {{#with input}}
+                                <div class="col-6">
+                                    {{#with surname}}
+                                    <label class="form-label">{{label}}</label>
+                                    <input placeholder="{{placeholder}}" class="form-control">
+                                    <div class="form-text">{{caption}}</div>
+                                    {{/with}}
+                                </div>
+                                <div class="col-6">
+                                    {{#with name}}
+                                    <label class="form-label">{{label}}</label>
+                                    <input placeholder="{{placeholder}}" class="form-control">
+                                    <div class="form-text">{{caption}}</div>
+                                    {{/with}}
+                                </div>
+                                <div class="col-6">
+                                    {{#with phone}}
+                                    <label class="form-label">{{label}}</label>
+                                    <input placeholder="{{placeholder}}" class="form-control">
+                                    <div class="form-text">{{caption}}</div>
+                                    {{/with}}
+                                </div>
+                                <div class="col-6">
+                                    {{#with email}}
+                                    <label class="form-label">{{label}}</label>
+                                    <input placeholder="{{placeholder}}" class="form-control">
+                                    <div class="form-text">{{caption}}</div>
+                                    {{/with}}
+                                </div>
+                                {{/with}}
+                            </div>
+                            {{/with}}
+                        </div>
+                        <div class="card-footer">
+                            {{#with form}}
+                            <div>
+                                {{#each switch}}
+                                <div class="form-check form-switch">
+                                    <label class="form-check-label">{{text}}</label>
+                                    {{#if isActive}}
+                                    <input type="checkbox" class="form-check-input">
+                                    {{else}}
+                                    <input type="checkbox" disabled class="form-check-input">
+                                    {{/if}}
+                                </div>
+                                {{/each}}
+                            </div>
+                            {{/with}}
+                        </div>
+                    </div>
+                    {{/with}}
+                </div>
+            </div>
+
+            <div class="col-12">
+                {{#with delivery}}
+                <div class="card">
+                    <div class="my-2">
+                        <h2>{{title}}</h2>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                {{#each select}}
+                                <div class="col-6">
+                                    <label class="form-label">{{label}}</label>
+                                    <select class="form-select">
+                                        <option>{{placeholder}}</option>
+                                        {{#each options}}
+                                        <option value={{value}}>{{text}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card py-2">
+                        {{#each delivery_type}}
+                        <div class="form-check">
+                            <label class="form-check-label">{{type}}</label>
+                            <input name="delivery" type="radio" class="form-check-input">
+                        </div>
+                        {{/each}}
+                    </div>
+
+                    <div class="card py-2">
+                        {{#with payment}}
+                        <div class="my-2">
+                            <h2>{{title}}</h2>
+                        </div>
+                        {{#each list}}
+                        <div class="form-check">
+                            <label class="form-check-label">{{type}}</label>
+                            <input name="payment" type="radio" class="form-check-input">
+                            <div class="form-text">{{description}}</div>
+                        </div>
+                        {{/each}}
+                        {{/with}}
+                    </div>
+
+                    <div class="card">
+                        {{#with contact}}
+                        <div class="my-2">
+                            <h2>{{title}}</h2>
+                        </div>
+
+                        <div class="row my-3">
+                            <div class="col-6">
+                                {{#with surname}}
+                                <label class="form-label">{{label}}</label>
+                                <input placeholder="{{placeholder}}" class="form-control">
+                                <div class="form-text">{{caption}}</div>
+                                {{/with}}
+                            </div>
+                            <div class="col-6">
+                                {{#with name}}
+                                <label class="form-label">{{label}}</label>
+                                <input placeholder="{{placeholder}}" class="form-control">
+                                <div class="form-text">{{caption}}</div>
+                                {{/with}}
+                            </div>
+                            <div class="col-6">
+                                {{#with phone}}
+                                <label class="form-label">{{label}}</label>
+                                <input placeholder="{{placeholder}}" class="form-control">
+                                <div class="form-text">{{caption}}</div>
+                                {{/with}}
+                            </div>
+                            <div class="col-6">
+                                {{#with email}}
+                                <label class="form-label">{{label}}</label>
+                                <input placeholder="{{placeholder}}" class="form-control">
+                                <div class="form-text">{{caption}}</div>
+                                {{/with}}
+                            </div>
+                        </div>
+                        {{/with}}
+                    </div>
+
+                    <div class="card-footer">
+                        {{#with coment}}
+                        <label class="form-label">{{label}}</label>
+                        <input placeholder="{{placeholder}}" class="form-control">
+                        {{/with}}
+                    </div>
+                </div>
+                {{/with}}
+            </div>
+
+            <div class="col-12">
+                {{#with coupon}}
+                <div class="card py-2">
+                    <div class="my-2">
+                        <h2>{{title}}</h2>
+                    </div>
+                    {{#with select}}
+                    <div>
+                        {{#with availabel_coupon}}
+                        <div class="my-2">
+                            <label class="form-label">{{label}}</label>
+                            <select class="form-select">
+                                <option>{{placeholder}}</option>
+                                {{#each options}}
+                                <option value={{value}}>{{text}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        {{/with}}
+
+                        {{#with friend_coupon}}
+                        <div class="my-2">
+                            <label class="form-label">{{label}}</label>
+                            <select class="form-select">
+                                <option>{{placeholder}}</option>
+                                {{#each options}}
+                                <option value={{value}}>{{text}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        {{/with}}
+                    </div>
+                    {{/with}}
+
+                    {{#with add}}
+                    <div>
+                        {{#with friend}}
+                        <div class="my-2">
+                            <label class="form-label">{{label}}</label>
+                            <input placeholder="{{placeholder}}" class="form-control">
+                            <div class="form-text">{{caption}}</div>
+                        </div>
+                        {{/with}}
+
+                        {{#with colleague}}
+                        <div class="my-2">
+                            <label class="form-label">{{label}}</label>
+                            <input placeholder="{{placeholder}}" class="form-control">
+                            <div class="form-text">{{caption}}</div>
+                        </div>
+                        {{/with}}
+                    </div>
+                    {{/with}}
+                </div>
+                {{/with}}
+            </div>
+
+            <div class="col-12">
+                {{#with quiz}}
+                <div class="card py-2">
+                    <div class="my-2">
+                        <h2>{{title}}</h2>
+                    </div>
+
+                    {{#with preference}}
+                    <div class="my-2">
+                        <p>{{title}}</p>
+                        <div class="form-check">
+                            {{#each options}}
+                            <div>
+                                <label class="form-check-label">{{this}}</label>
+                                <input name="preference" type="radio" class="form-check-input">
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{/with}}
+
+                    {{#with your_expirience}}
+                    <div class="my-2">
+                        <label class="form-label">{{label}}</label>
+                        <input class="form-control">
+                    </div>
+                    {{/with}}
+
+                    {{#with purchase_frequency}}
+                    <div class="my-2">
+                        <label class="form-label">{{label}}</label>
+                        <select class="form-select">
+                            <option>{{placeholder}}</option>
+                            {{#each options}}
+                            <option value={{value}}>{{text}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    {{/with}}
+
+                    {{#with factors}}
+                    <div class="my-2">
+                        <p>{{title}}</p>
+                        <div class="form-check">
+                            {{#each options}}
+                            <div>
+                                <label class="form-check-label">{{this}}</label>
+                                <input name="factors" type="checkbox" class="form-check-input">
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{/with}}
+                </div>
+                {{/with}}
+        </section>
+
+        <section class="col-4">
+            <div class="col-12">
+                <div class="card mb-2">
+                    {{#each action_block}}
+                    <div class="m-2">
+                        <button
+                            class="btn {{#if isSuccess}}btn-success{{/if}} {{#if isDanger}}btn-danger{{/if}} {{#if isInfo}}btn-info{{/if}}">
+                            {{text}}
+                        </button>
+                    </div>
+                    {{/each}}
+                </div>
+
+                <div class="card">
+                    {{#with total}}
+                    <div class="card-body pb-1">
+                        <div class="card-title">
+                            <h2>{{title}}</h2>
+                        </div>
+                        {{#each item_list}}
+                        <div>{{name}}: {{price}}</div>
+                        {{/each}}
+
+                        <div>
+                            <hr />
+                        </div>
+
+                        {{#each additional_info}}
+                        <div>{{text}}: {{value}}</div>
+                        {{/each}}
+
+                        <div>
+                            <hr />
+                        </div>
+
+                        {{#each button}}
+                        <div class="mb-2">
+                            <button
+                                class="btn {{#if isPrimary}}btn-primary{{/if}} {{#if isOutline}}btn-outline-primary{{/if}}">
+                                {{text}}
+                            </button>
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{/with}}
+                </div>
+            </div>
+        </section>
+
+        <section class="col-12">
+            <div class="card">
+                <div class="card-footer">
+                    <div class="row">
+                        {{#each footer}}
+                        <div class="nav flex-colum col-2 me-1">
+                            <div class="nav-item">
+                                <a href={{this.[0].link}} class="btn btn-link nav-link">{{this.[0].text}}</a>
+                            </div>
+
+                            <div class="nav-item">
+                                <a href={{this.[1].link}} class="btn btn-link nav-link">{{this.[1].text}}</a>
+                            </div>
+
+                            <div class="nav-item">
+                                <a href={{this.[2].link}} class="btn btn-link nav-link">{{this.[2].text}}</a>
+                            </div>
+
+                            <div class="nav-item">
+                                <a href={{this.[3].link}} class="btn btn-link nav-link disabled">{{this.[3].text}}</a>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
