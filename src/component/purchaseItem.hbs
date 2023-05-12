@@ -1,0 +1,27 @@
+<div class="card py-2">
+    <div class="row">
+        <div class="col-4">
+            <div>{{number}}</div>
+            <b>{{status}}</b>
+        </div>
+
+        <div class="col-2">
+            {{#with amount}}
+            <div>{{title}}</div>
+            <b>{{value}}</b>
+            {{/with}}
+        </div>
+
+        <div class="col-4">
+            {{#each images}}
+            <img src="{{this}}" width="50px" height="50px">
+            {{/each}}
+        </div>
+
+        <div class="col-2">
+            {{#with button}}
+            <a href="link" class="btn {{#if isPrimary}}btn-primary{{/if}} mt-2">{{text}}</a>
+            {{/with}}
+        </div>
+    </div>
+</div>
