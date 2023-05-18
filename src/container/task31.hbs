@@ -1,6 +1,6 @@
 <main>
     <div class="row">
-        <section class="col-12">
+        <section class="col-12 mb-2">
             {{#with navigation}}
             <div class="row gx-1">
                 {{#each links}}
@@ -31,7 +31,7 @@
 
                 {{#with city}}
                 <div class="card-body">
-                    <h2 class="card-title">{{title}}</h2>
+                    <h2 class="card-title mb-2">{{title}}</h2>
 
                     <div class="row gx-1 gy-3">
                         {{#each cards}}
@@ -59,7 +59,9 @@
         <section class="col-12">
             {{#with winner}}
             <div class="card">
-                <h2>{{title}}</h2>
+                <div class="my-2">
+                    <h2>{{title}}</h2>
+                </div>
                 <table class="table">
                     {{#with table}}
                     <thead>
@@ -88,7 +90,9 @@
         <section class="col-12">
             {{#with gallery}}
             <div class="card">
-                <h2>{{title}}</h2>
+                <div class="my-2">
+                    <h2>{{title}}</h2>
+                </div>
 
                 <div class="row gx-1">
                     {{#each cards}}
@@ -111,7 +115,7 @@
         <section class="col-12">
             {{#with relaxion}}
             <div class="card">
-                <div class="display-3">{{title}}</div>
+                <div class="display-3 my-2">{{title}}</div>
 
                 <div class="row gx-3 gy-5">
                     {{#each cards}}
@@ -158,7 +162,7 @@
         <section class="col-12">
             {{#with proposition}}
             <div class="card">
-                <div class="display-2">{{title}}</div>
+                <div class="display-2 my-2">{{title}}</div>
 
                 <div class="row gx-1">
                     {{#each card}}
@@ -180,27 +184,33 @@
         <section class="col-12">
             {{#with footer}}
             <div class="card">
-                <div class="card-footer">
-                    <div>
+                <div class="card-footer p-2">
+                    <div class="my-2">
                         <h5>{{title}}</h5>
                     </div>
 
                     <div class="row">
-                        <nav class="col-1">
+                        <nav class="col-3">
                             {{#each navigation}}
-                            <a href={{href}} class="btn btn-link">{{text}}</a>
+                            <div class="my-2">
+                                <a href="{{href}}" class="btn btn-link">{{text}}</a>
+                            </div>
                             {{/each}}
                         </nav>
 
-                        <nav class="col-1">
+                        <nav class="col-3">
                             {{#each socialMedia}}
-                            <a href={{link}} class="btn btn-outline-dark">{{name}}</a>
+                            <div class="my-2">
+                                <a href="{{link}}" class="btn btn-outline-dark">{{name}}</a>
+                            </div>
                             {{/each}}
                         </nav>
 
-                        <nav class="col-1">
+                        <nav class="col-3">
                             {{#each partners}}
-                            <a href={{link}} class="btn btn-outline-info">{{name}}</a>
+                            <div class="my-2">
+                                <a href="{{link}}" class="btn btn-outline-info">{{name}}</a>
+                            </div>
                             {{/each}}
                         </nav>
                     </div>

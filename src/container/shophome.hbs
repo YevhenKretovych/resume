@@ -7,9 +7,14 @@
                 <ul class="nav">
                     {{#each links}}
                     <li class="nav-item">
-                        <a href={{href}} class="nav-link">{{text}}</a>
+                        <a {{#if href}}href={{href}} class="nav-link" {{else}}class="nav-link disabled" {{/if}}>
+                            {{text}}
+                        </a>
                     </li>
                     {{/each}}
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
                 </ul>
             </div>
             {{/with}}
@@ -104,7 +109,7 @@
 
         <section class="col-12">
             {{#with service}}
-            <div class="card text-center text-bg-success">
+            <div class="card text-center text-bg-success mb-5">
                 <h2>{{title}}</h2>
                 <p>{{description}}</p>
                 {{#each buttons}}
@@ -117,14 +122,26 @@
         </section>
 
         <section class="col-12">
-            <div class="card mt-5">
+            <div class="card">
                 <div class="card-footer">
                     <div class="row">
                         {{#each footer}}
-                        <div class="col-2 me-3 ps-0">
-                            {{#each this}}
-                            <a href={{link}} class="btn btn-link ps-0">{{text}}</a>
-                            {{/each}}
+                        <div class="nav col-2 me-1">
+                            <div class="nav-item">
+                                <a href={{this.[0].link}} class="btn btn-link nav-link">{{this.[0].text}}</a>
+                            </div>
+
+                            <div class="nav-item">
+                                <a href={{this.[1].link}} class="btn btn-link nav-link">{{this.[1].text}}</a>
+                            </div>
+
+                            <div class="nav-item">
+                                <a href={{this.[2].link}} class="btn btn-link nav-link">{{this.[2].text}}</a>
+                            </div>
+
+                            <div class="nav-item">
+                                <a href={{this.[3].link}} class="btn btn-link nav-link disabled">{{this.[3].text}}</a>
+                            </div>
                         </div>
                         {{/each}}
                     </div>

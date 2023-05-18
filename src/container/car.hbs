@@ -2,17 +2,18 @@
     <main>
         <section>
             <div>
-                <div>
+                <div class="my-5">
                     <h1>{{make}} {{model}}</h1>
                 </div>
                 <div>Year : {{year}}</div>
                 <div>color: {{color}}</div>
-                <br />
-                <hr />
+
+                <hr class="my-5" />
+
                 {{#with features}}
                 <div>
                     {{> title title="Features" big=true}}
-                    <br />
+
                     {{> title title="Interior" big=false}}
                     {{#with interior}}
                     <div>
@@ -48,7 +49,7 @@
                         </div>
                         {{/with}}
                         {{#with audio}}
-                        <div>
+                        <div class="mb-2">
                             <em>Audio:</em>
                             <span class="badge text-bg-primary">System: {{system}}</span>
                             <span class="badge text-bg-secondary">Speakers: {{speakers}}</span>
@@ -64,11 +65,11 @@
                         </div>
                         {{/with}}
                     </div>
-                    <br />
                     {{/with}}
+
                     {{> title title="Exterior" big=false}}
                     {{#with exterior}}
-                    <div>
+                    <div class="mb-2">
                         {{#with wheels}}
                         <div>
                             <em>Wheels:</em>
@@ -98,8 +99,8 @@
                         </div>
                         {{/with}}
                     </div>
-                    <br />
                     {{/with}}
+
                     {{> title title="Safety"}}
                     {{#with safety}}
                     <div>
@@ -137,14 +138,11 @@
                 </div>
                 {{/with}}
 
-                <br />
-                <hr />
-                <br />
+                <hr class="my-5" />
 
                 {{#with engine}}
                 <div>
                     {{> title title="Engine" big=true}}
-                    <br />
                     <span class="badge text-bg-primary">Type: {{type}}</span>
                     <span class="badge text-bg-secondary">Displacement: {{displacement}}</span>
                     <span class="badge text-bg-success">Horsepower: {{horsepower}}</span>
@@ -159,28 +157,22 @@
                 </div>
                 {{/with}}
 
-                <br />
-                <hr />
-                <br />
+                <hr class="my-5" />
 
                 {{#with fuel_economy}}
                 <div>
                     {{> title title="Fuel economy" big=true}}
-                    <br />
                     <span class="badge text-bg-primary">City: {{city}}</span>
                     <span class="badge text-bg-secondary">Highway: {{highway}}</span>
                     <span class="badge text-bg-success">Combined: {{combined}}</span>
                 </div>
                 {{/with}}
 
-                <br />
-                <hr />
-                <br />
+                <hr class="my-5" />
 
                 {{#with price}}
                 <div>
                     {{> title title="Price" big=true}}
-                    <br />
                     <span class="badge text-bg-primary">Base: {{base}}</span>
                     <span class="badge text-bg-secondary">Destination: {{destination}}</span>
                     {{#with options}}

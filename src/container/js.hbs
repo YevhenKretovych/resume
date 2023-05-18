@@ -2,7 +2,7 @@
     <main>
         <section>
             <div>
-                <div>
+                <div class="my-5">
                     <h1>{{name}}</h1>
                 </div>
                 <div>
@@ -12,52 +12,66 @@
                 <div>
                     <div>{{year}}</div>
                     <div>{{founder}}</div>
-                    <br />
+                </div>
+
+                <div class="mt-2">
                     <em>Types:</em>
                 </div>
                 {{/with}}
-                <ul>
+                <ul class="ms-5">
                     {{#each types}}
                     <li>{{this}}</li>
                     {{/each}}
                 </ul>
-                <em>Syntax:</em>
+
                 {{#with syntax}}
                 <div>
+                    <em>Syntax:</em>
                     <span class="badge text-bg-primary">{{variables}}</span>
                     <span class="badge text-bg-secondary">{{functions}}</span>
                     <span class="badge text-bg-success">{{conditionals}}</span>
                     <span class="badge text-bg-danger">{{loops}}</span>
                     <span class="badge text-bg-warning">{{classes}}</span>
                 </div>
-                <br />
                 {{/with}}
-                <em>Features:</em>
-                <ul>
+
+                <div class="mt-2">
+                    <em>Features:</em>
+                </div>
+                <ul class="ms-5">
                     {{#each features}}
                     <li>
                         <span class="badge text-bg-info">{{this}}</span>
                     </li>
                     {{/each}}
                 </ul>
-                <em>Libraries:</em>
-                <ul>
+
+                <div class="mt-2">
+                    <em>Libraries:</em>
+                </div>
+                <ul class="ms-5">
                     {{#each libraries}}
                     <li>
                         <span class="badge text-bg-light">{{this}}</span>
                     </li>
                     {{/each}}
                 </ul>
-                <em>Tools:</em>
-                <ul>
+
+                <div class="mt-2">
+                    <em>Tools:</em>
+                </div>
+                <ul class="ms-5">
                     {{#each tools}}
                     <li>
                         <span class="badge text-bg-dark">{{this}}</span>
                     </li>
                     {{/each}}
                 </ul>
-                <em>Community:</em>
-                <ul>
+
+                <div class="mt-2">
+                    <em>Community:</em>
+                </div>
+                <ul class="ms-5">
                     {{#each community}}
                     <li>
                         <button type="button" class="btn btn-link">{{name}} - {{type}}</button>

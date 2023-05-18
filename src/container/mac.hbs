@@ -2,17 +2,14 @@
     <main>
         <section>
             <div>
-                <div>
+                <div class="my-5">
                     <h1>{{name}}</h1>
                 </div>
-                <br />
                 <p>{{description}}</p>
                 <div>{{category}}</div>
                 <div>Price: {{price}}</div>
 
-                <br />
-                <hr />
-                <br />
+                <hr class="my-5" />
 
                 {{#with features}}
                 <div>
@@ -27,7 +24,7 @@
                         <span class="badge text-bg-warning">Cache: {{cache}}</span>
                     </div>
                     {{/with}}
-                    <br />
+
                     {{#with memory}}
                     <div>
                         <em>Memory:</em>
@@ -36,7 +33,7 @@
                         <span class="badge text-bg-success">Speed: {{speed}}</span>
                     </div>
                     {{/with}}
-                    <br />
+
                     {{#with storage}}
                     <div>
                         <em>Storage:</em>
@@ -44,7 +41,7 @@
                         <span class="badge text-bg-secondary">Size: {{size}}</span>
                     </div>
                     {{/with}}
-                    <br />
+
                     {{#with display}}
                     <div>
                         <em>Display:</em>
@@ -56,7 +53,7 @@
                         <span class="badge text-bg-info">Refresh rate: {{refresh_rate}}</span>
                     </div>
                     {{/with}}
-                    <br />
+
                     {{#with graphics}}
                     <div>
                         <em>Graphics:</em>
@@ -65,9 +62,9 @@
                         <span class="badge text-bg-success">Memory: {{memory}}</span>
                     </div>
                     {{/with}}
-                    <br />
+
                     <em>Ports:</em>
-                    <ul>
+                    <ul class="ms-5">
                         {{#each ports}}
                         <li>
                             <span class="badge text-bg-primary">Type: {{type}}</span>
@@ -75,7 +72,7 @@
                             {{#if features}}
                             <div>
                                 <em>Features:</em>
-                                <ul>
+                                <ul class="ms-5">
                                     {{#each features}}
                                     <li>{{this}}</li>
                                     {{/each}}
@@ -85,7 +82,6 @@
                         </li>
                         {{/each}}
                     </ul>
-                    <br />
                     {{#with battery}}
                     <div>
                         <em>Battery:</em>
@@ -94,7 +90,7 @@
                         <span class="badge text-bg-success">Life: {{life}}</span>
                     </div>
                     {{/with}}
-                    <br />
+
                     <div>
                         <span class="badge text-bg-primary">Weight: {{weight}}</span>
                         {{#with dimensions}}
@@ -106,12 +102,12 @@
                         </div>
                         {{/with}}
                     </div>
-                    <br />
+
                     <div>
                         <span class="badge text-bg-primary">Operating system: {{operating_system}}</span>
                         <div>
                             <em>Accessories:</em>
-                            <ul>
+                            <ul class="ms-5">
                                 {{#each accessories}}
                                 <li>
                                     <span class="badge text-bg-primary">Name: {{name}}</span>
