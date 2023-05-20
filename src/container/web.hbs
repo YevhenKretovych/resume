@@ -2,23 +2,23 @@
     <main>
         <section>
             <div>
-                <div>
+                <div class="my-5">
                     <h1>Languages</h1>
                 </div>
                 {{#with web}}
                 <div>
-                    <ul>
+                    <ul class="ps-5">
                         {{#each languages}}
                         <li>
                             {{> title title=name big=true}}
                             <div>{{version}}</div>
                             <p>{{description}}</p>
-                            <ul>
+                            <ul class="ps-5">
                                 {{#each elements}}
                                 <li>
                                     <strong>{{name}}</strong>
                                     <p>{{description}}</p>
-                                    <ul>
+                                    <ul class="ps-5">
                                         {{#each attributes}}
                                         <li>
                                             <div>{{name}}</div>
@@ -29,12 +29,13 @@
                                 </li>
                                 {{/each}}
                             </ul>
-                            <ul>
+
+                            <ul class="ps-5">
                                 {{#each properties}}
                                 <li>
                                     <strong>{{name}}</strong>
                                     <p>{{description}}</p>
-                                    <ul>
+                                    <ul class="ps-5">
                                         {{#each values}}
                                         <li>
                                             <div>{{value}}</div>
@@ -45,12 +46,13 @@
                                 </li>
                                 {{/each}}
                             </ul>
-                            <ul>
+
+                            <ul class="ps-5">
                                 {{#each functions}}
                                 <li>
                                     <strong>{{name}}</strong>
                                     <p>{{description}}</p>
-                                    <ul>
+                                    <ul class="ps-5" s>
                                         {{#each parameters}}
                                         <li>
                                             <div>{{name}}</div>

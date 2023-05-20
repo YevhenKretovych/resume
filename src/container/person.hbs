@@ -4,16 +4,16 @@
             <div>
                 {{#with person}}
                 <div>
-                    <div>
+                    <div class="my-5">
                         <h1>{{name}}</h1>
                     </div>
-                    <div>Age: {{age}}</div>
-                    <br />
-                    <div>Marital status: {{gender}}</div>
-                    <br />
+                    <div class="mb-2">Age: {{age}}</div>
+                    <div class="mb-2">Marital status: {{gender}}</div>
                     <address>
-                        <em>Address:</em>
-                        <ul>
+                        <div class="mt-2">
+                            <em>Address:</em>
+                        </div>
+                        <ul class="ps-5">
                             {{#each address}}
                             <li>{{this}}</li>
                             {{/each}}
@@ -23,16 +23,13 @@
 
                 <div>
                     {{> title title="Education" big=true}}
-                    <ul>
+                    <ul class="ps-5">
                         {{#each education}}
                         <li>
-                            <div>{{university}}</div>
-                            <br />
-                            <div>{{degree}}</div>
-                            <br />
-                            <div>{{major}}</div>
-                            <br />
-                            <div>{{graduationYear}}</div>
+                            <div class="mb-2">{{university}}</div>
+                            <div class="mb-2">{{degree}}</div>
+                            <div class="mb-2">{{major}}</div>
+                            <div class="mb-2">{{graduationYear}}</div>
                         </li>
                         {{/each}}
                     </ul>
@@ -40,14 +37,12 @@
 
                 <div>
                     {{> title title="Word experience" big=false}}
-                    <ul>
+                    <ul class="ps-5">
                         {{#each workExperience}}
                         <li>
-                            <div>{{company}}</div>
-                            <br />
-                            <div>{{title}}</div>
-                            <br />
-                            <div>
+                            <div class="mb-2">{{company}}</div>
+                            <div class="mb-2">{{title}}</div>
+                            <div class="mb-2">
                                 {{startDate}} -
                                 {{#if endDate}}
                                 {{endDate}}
@@ -55,88 +50,92 @@
                                 (I'm working now)
                                 {{/if}}
                             </div>
-                            <br />
-                            <em>Responsibilities:</em>
-                            <ul>
+
+                            <div class="mt-2">
+                                <em>Responsibilities:</em>
+                            </div>
+                            <ul class="ps-5">
                                 {{#each responsibilities}}
                                 <li>
                                     <p>{{this}}</p>
                                 </li>
                                 {{/each}}
                             </ul>
-                            <div>Year of founded: {{year_founded}}</div>
-                            <br />
-                            <div>Industry: {{industry}}</div>
-                            <br />
-                            <em>Employees:</em>
-                            <ul>
+                            <div class="mb-2">Year of founded: {{year_founded}}</div>
+                            <div class="mb-2">Industry: {{industry}}</div>
+
+                            <div class="mt-2">
+                                <em>Employees:</em>
+                            </div>
+                            <ul class="ps-5">
                                 {{#each employees}}
                                 <li>
-                                    <div>{{name}}</div>
-                                    <br />
-                                    <div>{{position}}</div>
-                                    <br />
-                                    <div>{{department}}</div>
-                                    <br />
-                                    <em>Projects:</em>
-                                    <ul>
+                                    <div class="mb-2">{{name}}</div>
+                                    <div class="mb-2">{{position}}</div>
+                                    <div class="mb-2">{{department}}</div>
+
+                                    <div class="mt-2">
+                                        <em>Projects:</em>
+                                    </div>
+                                    <ul class="ps-5">
                                         {{#each projects}}
                                         <li>
-                                            <b>{{name}}</b>
-                                            <br />
+                                            <b class="mb-2">{{name}}</b>
                                             <p>{{description}}</p>
-                                            <br />
-                                            <div>{{status}}</div>
-                                            <br />
-                                            <em>Teams:</em>
-                                            <ul>
+                                            <div class="mb-2">{{status}}</div>
+
+                                            <div class="mt-2">
+                                                <em>Teams:</em>
+                                            </div>
+                                            <ul class="ps-5">
                                                 {{#each teams}}
                                                 <li>
-                                                    <b>{{team_name}}</b>
-                                                    <br />
+                                                    <b class="mb-2">{{team_name}}</b>
                                                     {{#with team_leader}}
-                                                    <div>{{name}}</div>
-                                                    <br />
-                                                    <div>{{title}}</div>
-                                                    <br />
+                                                    <div class="mb-2">{{name}}</div>
+                                                    <div class="mb-2">{{title}}</div>
                                                     {{> link href=email text=email blank=true noLine=true}}
                                                     {{/with}}
                                                 </li>
-                                                <br />
-                                                <ul>
+
+                                                <ul class="ps-5 mt-2">
                                                     {{#each team_members}}
                                                     <li>
-                                                        <div>{{name}}</div>
-                                                        <br />
-                                                        <div>{{title}}</div>
-                                                        <br />
+                                                        <div class="mb-2">{{name}}</div>
+                                                        <div class="mb-2">{{title}}</div>
                                                         {{> link href=email text=email blank=true noLine=true}}
-                                                        <br />
-                                                        <br />
-                                                        <em>Skills:</em>
-                                                        <ul>
+
+                                                        <div class="mt-2">
+                                                            <em>Skills:</em>
+                                                        </div>
+                                                        <ul class="ps-5">
                                                             {{#each skills}}
                                                             <li>{{this}}</li>
                                                             {{/each}}
                                                         </ul>
-                                                        <br />
-                                                        <em>Projects:</em>
-                                                        <ul>
+
+                                                        <div class="mt-2">
+                                                            <em>Projects:</em>
+                                                        </div>
+                                                        <ul class="ps-5">
                                                             {{#each projects}}
                                                             <li>
-                                                                <div>{{name}}</div>
-                                                                <br />
+                                                                <div class="mb-2">{{name}}</div>
                                                                 <p>{{description}}</p>
-                                                                <br />
-                                                                <em>Technologies:</em>
-                                                                <ul>
+
+                                                                <div class="mt-2">
+                                                                    <em>Technologies:</em>
+                                                                </div>
+                                                                <ul class="ps-5">
                                                                     {{#each technologies}}
                                                                     <li>{{this}}</li>
                                                                     {{/each}}
                                                                 </ul>
-                                                                <br />
-                                                                <em>Team:</em>
-                                                                <ul>
+
+                                                                <div class="mt-2">
+                                                                    <em>Team:</em>
+                                                                </div>
+                                                                <ul class="ps-5">
                                                                     {{#each team_members}}
                                                                     <li>
                                                                         <div>{{name}}</div>

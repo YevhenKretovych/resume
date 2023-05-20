@@ -2,30 +2,38 @@
     <main>
         <section>
             <div>
-                <div>
+                <div class="my-5">
                     <h1>{{name}}</h1>
                 </div>
                 <div>
-                    <em>Users:</em>
-                    <ul>
+                    <div class="mt-2">
+                        <em>Users:</em>
+                    </div>
+                    <ul class="ms-5">
                         {{#each users}}
                         <li>
                             <span class="badge text-bg-primary">Id: {{id}}</span>
                             <span class="badge text-bg-secondary">Name: {{name}}</span>
                             <span class="badge text-bg-success">Gender: {{gender}}</span>
                             <span class="badge text-bg-danger">Age: {{age}}</span>
+
                             <div>
-                                <em>Friends:</em>
-                                <ul>
+                                <div class="mt-2">
+                                    <em>Friends:</em>
+                                </div>
+                                <ul class="ms-5">
                                     {{#each friends}}
                                     <li>
                                         <span class="badge text-bg-primary">Id: {{id}}</span>
                                         <span class="badge text-bg-secondary">Name: {{name}}</span>
                                         <span class="badge text-bg-success">Gender: {{gender}}</span>
                                         <span class="badge text-bg-danger">Age: {{age}}</span>
+
                                         <div>
-                                            <em>Mutual friends:</em>
-                                            <ul>
+                                            <div class="mt-2">
+                                                <em>Mutual friends:</em>
+                                            </div>
+                                            <ul class="ms-5">
                                                 {{#each mutual_friends}}
                                                 <li>
                                                     <span class="badge text-bg-primary">Id: {{id}}</span>
@@ -33,9 +41,12 @@
                                                     <span class="badge text-bg-success">Gender: {{gender}}</span>
                                                     <span class="badge text-bg-danger">Age: {{age}}</span>
                                                     {{#if mutual_friends}}
+
                                                     <div>
-                                                        <em>Mutual friends:</em>
-                                                        <ul>
+                                                        <div class="mt-2">
+                                                            <em>Mutual friends:</em>
+                                                        </div>
+                                                        <ul class="ms-5">
                                                             {{#each mutual_friends}}
                                                             <li>
                                                                 <span class="badge text-bg-primary">Id: {{id}}</span>
@@ -53,18 +64,24 @@
                                                 {{/each}}
                                             </ul>
                                         </div>
+
                                         {{#if groups}}
                                         <div>
-                                            <em>Groups:</em>
-                                            <ul>
+                                            <div class="mt-2">
+                                                <em>Groups:</em>
+                                            </div>
+                                            <ul class="ms-5">
                                                 {{#each groups}}
                                                 <li>
                                                     <span class="badge text-bg-primary">Id: {{id}}</span>
                                                     <span class="badge text-bg-secondary">Name: {{name}}</span>
                                                     <p>{{description}}</p>
+
                                                     <div>
-                                                        <em>Members:</em>
-                                                        <ul>
+                                                        <div class="mt-2">
+                                                            <em>Members:</em>
+                                                        </div>
+                                                        <ul class="ms-5">
                                                             {{#each members}}
                                                             <li>
                                                                 <span class="badge text-bg-primary">Id: {{id}}</span>
@@ -86,18 +103,24 @@
                                     {{/each}}
                                 </ul>
                             </div>
+
                             {{#if groups}}
                             <div>
-                                <em>Groups:</em>
-                                <ul>
+                                <div class="mt-2">
+                                    <em>Groups:</em>
+                                </div>
+                                <ul class="ms-5">
                                     {{#each groups}}
                                     <li>
                                         <span class="badge text-bg-primary">Id: {{id}}</span>
                                         <span class="badge text-bg-secondary">Name: {{name}}</span>
                                         <p>{{description}}</p>
+
                                         <div>
-                                            <em>Members:</em>
-                                            <ul>
+                                            <div class="mt-2">
+                                                <em>Members:</em>
+                                            </div>
+                                            <ul class="ms-5">
                                                 {{#each members}}
                                                 <li>
                                                     <span class="badge text-bg-primary">Id: {{id}}</span>

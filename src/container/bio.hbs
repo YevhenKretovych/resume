@@ -1,7 +1,7 @@
 <div>
     <main>
         <section>
-            <div>
+            <div class="my-5">
                 <h1>{{name}}</h1>
             </div>
             <div>Birthdate: {{birthdate}}</div>
@@ -10,14 +10,18 @@
             <address>{{deathplace}}</address>
             <p>Nationaliti: {{nationality}}</p>
             <p>Profession: {{occupation}}</p>
-            <em>Scientific activity:</em>
-            <ul>
+
+            <div class="mt-2">
+                <em>Scientific activity:</em>
+            </div>
+            <ul class="ps-5">
                 {{#each known_for}}
                 <li>{{this}}</li>
                 {{/each}}
             </ul>
+
             {{> title title="Education" big=true}}
-            <ul>
+            <ul class="ps-5">
                 {{#each education}}
                 <li>
                     <div>{{degree}}</div>
@@ -27,8 +31,9 @@
                 </li>
                 {{/each}}
             </ul>
+
             {{> title title="Notable publications" big=false}}
-            <ul>
+            <ul class="ps-5">
                 {{#each notable_publications}}
                 <li>
                     <cite>{{title}}</cite>
@@ -37,8 +42,9 @@
                 </li>
                 {{/each}}
             </ul>
+
             {{> title title="Wifes" big=false}}
-            <ul>
+            <ul class="ps-5">
                 {{#each partners}}
                 <li>
                     <div>{{name}}</div>
@@ -47,8 +53,9 @@
                 </li>
                 {{/each}}
             </ul>
+
             {{> title title="Awards" big=false}}
-            <ul>
+            <ul class="ps-5">
                 <li>
                     {{#each awards}}
                     <cite>{{title}}</cite>
@@ -57,28 +64,32 @@
                     {{/each}}
                 </li>
             </ul>
+
             {{> title title="Influences" big=false}}
-            <ul>
+            <ul class="ps-5">
                 {{#each influences}}
                 <li>{{this}}</li>
                 {{/each}}
             </ul>
+
             {{> title title="Influenced" big=false}}
-            <ul>
+            <ul class="ps-5">
                 {{#each influenced}}
                 <li>{{this}}</li>
                 {{/each}}
             </ul>
+
             {{> title title="Quotes" big=false}}
-            <ul>
+            <ul class="ps-5">
                 {{#each quotes}}
                 <li>
                     <q>{{this}}</q>
                 </li>
                 {{/each}}
             </ul>
+
             {{> title title="Major discoveries"}}
-            <ul>
+            <ul class="ps-5">
                 {{#each major_discoveries}}
                 <li>
                     <div>{{title}}</div>
@@ -87,6 +98,7 @@
                 </li>
                 {{/each}}
             </ul>
+
             {{> title title="Contributions"}}
             {{#with contributions}}
             <div>{{title}}</div>
